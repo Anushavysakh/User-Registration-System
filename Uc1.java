@@ -3,8 +3,7 @@ package com.day19assignment.bridgelabz;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class Uc5 {
-
+public class Uc6 {
 	static String number, firstName, lastName, email, password;
 	Scanner sc = new Scanner(System.in);
 
@@ -19,6 +18,7 @@ public class Uc5 {
             System.out.println("Phone number you entered is Valid");
 
 		}
+
 	}
 
 	void validateFirstName() {
@@ -63,10 +63,10 @@ public class Uc5 {
 
 	void validatePassword() {
 
-		String passwordExp = "^[A-Z a-z]{8,}$";
+		String passwordExp ="^.*(?=.*[A-Z])([a-z0-9])(?=.{8,}).*$";
 		System.out.println("Enter Password:");
 		password = sc.next();
-		boolean b3 = Pattern.matches(passwordExp, email);
+		boolean b3 = Pattern.matches(passwordExp, password);
 		if (b3 != true) {
 			System.out.println("Invalid Password");
 		}else {
@@ -76,7 +76,7 @@ public class Uc5 {
 	}
 
 	public static void main(String args[]) {
-		Uc5 obj = new Uc5();
+		Uc6 obj = new Uc6();
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Welcome to User Registration System");
@@ -91,3 +91,5 @@ public class Uc5 {
 		obj.validatePassword();
 	}
 }
+
+
