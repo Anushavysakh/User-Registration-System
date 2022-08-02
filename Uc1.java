@@ -3,8 +3,7 @@ package com.day19assignment.bridgelabz;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class Uc7 {
-	
+public class Uc8 {
 	static String number, firstName, lastName, email, password;
 	Scanner sc = new Scanner(System.in);
 
@@ -50,7 +49,7 @@ public class Uc7 {
 
 	void validateEmail() {
 
-		String emailExp = "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$";
+		String emailExp =  "^[a-zA-Z0-9]+([.+_-]{0,1}+[a-zA-Z0-9])*+@+[a-zA-Z0-9]+.+([a-zA-Z]{2,4})+([.]{1}+[a-zA-Z]{0,2})*$";
 		System.out.println("Enter Email Id : ");
 		email = sc.next();
 		boolean b3 = Pattern.matches(emailExp, email);
@@ -64,7 +63,7 @@ public class Uc7 {
 	
 	void validatePassword() {
 
-		String passwordExp = "^.*(?=.*[A-Z])(?=.*[0-9])([a-z])(?=.{8,}).*$";
+		String passwordExp = "^.*(?=.*[A-Z])(?=.*[0-9])([a-z])(?=[@#$%^&+=]*)(?=.{8,}).*$";
 		System.out.println("Enter Password:");
 		password = sc.next();
 		boolean b3 = Pattern.matches(passwordExp, password);
@@ -78,7 +77,7 @@ public class Uc7 {
 
 	public static void main(String args[]) {
 		
-		Uc7 obj = new Uc7();
+		Uc8 obj = new Uc8();
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Welcome to User Registration System");
