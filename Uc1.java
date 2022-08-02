@@ -3,7 +3,8 @@ package com.day19assignment.bridgelabz;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class Uc6 {
+public class Uc7 {
+	
 	static String number, firstName, lastName, email, password;
 	Scanner sc = new Scanner(System.in);
 
@@ -15,7 +16,7 @@ public class Uc6 {
 		if (b3 != true) {
 			System.out.println("The Phone Number you Entered is Invalid");
 		}else {
-            System.out.println("Phone number you entered is Valid");
+            System.out.println("Phone number you entered is valid");
 
 		}
 
@@ -29,7 +30,7 @@ public class Uc6 {
 		if (b3 != true) {
 			System.out.println("Invalid Firstname");
 		}else {
-            System.out.println("First Name you entered is Valid");
+            System.out.println("First Name you entered is valid");
 
 		}
 	}
@@ -42,7 +43,7 @@ public class Uc6 {
 		if (b3 != true) {
 			System.out.println("Invalid Lastname");
 		}else {
-            System.out.println("Last Name you entered is Valid");
+            System.out.println("Last Name you entered is valid");
 
 		}
 	}
@@ -56,27 +57,28 @@ public class Uc6 {
 		if (b3 != true) {
 			System.out.println("Invalid Mail Id");
 		}else {
-            System.out.println("Email you entered is Valid");
+            System.out.println("Email you entered is valid");
 
 		}
 	}
-
+	
 	void validatePassword() {
 
-		String passwordExp ="^.*(?=.*[A-Z])([a-z0-9])(?=.{8,}).*$";
+		String passwordExp = "^.*(?=.*[A-Z])(?=.*[0-9])([a-z])(?=.{8,}).*$";
 		System.out.println("Enter Password:");
 		password = sc.next();
 		boolean b3 = Pattern.matches(passwordExp, password);
 		if (b3 != true) {
 			System.out.println("Invalid Password");
 		}else {
-            System.out.println("Password is Valid");
+            System.out.println("Password is valid");
 
 		}
 	}
 
 	public static void main(String args[]) {
-		Uc6 obj = new Uc6();
+		
+		Uc7 obj = new Uc7();
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Welcome to User Registration System");
@@ -91,5 +93,3 @@ public class Uc6 {
 		obj.validatePassword();
 	}
 }
-
-
